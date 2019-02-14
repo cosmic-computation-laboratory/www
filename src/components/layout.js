@@ -26,6 +26,7 @@ const Layout = ({ children }) => (
           <Flex
             flexDirection='column'
             justifyContent='space-between'
+            px={3}
           >
             <Box flex='1 0 auto'>{children}</Box>
             <Flex my={3} flexDirection={['column', 'row']} justifyContent='center'>
