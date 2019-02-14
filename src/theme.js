@@ -4,6 +4,7 @@ const theme = {
   },
   fonts: {
     serif: ['WindsorLT-Bold', 'Georgia', 'serif'].join(', '),
+    stamp: ['HandStampedJNL-Regular', 'serif'].join(', '),
     sans: [
       "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Helvetica", "sans-serif"
     ].join(', ')

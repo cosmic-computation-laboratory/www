@@ -9,7 +9,7 @@ import { Flex, Heading, Box, Link, Text } from '@rebass/emotion'
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`Cosmic Computation Laboratory`, `R&D`, `Emergent Technology`, `Entheotechnology`]} />
-    <Flex flexDirection='column' justifyContent='space-between' alignItems={['left', 'center']}>
+    <Flex bg='blue' px={3} flexDirection='column' flex='1 0 auto' alignItems={['left', 'center']}>
       <Box style={{ width: `150px` }} mb={[2, 4]} mt={[1, 4, 5]}>
         <Image />
       </Box>

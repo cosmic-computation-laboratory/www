@@ -20,26 +20,22 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <ThemeProvider theme={theme}>
-        <Flex bg='blue' margin='0' justifyContent='center' style={{
-          minHeight: '100vh'
-        }}>
-          <Flex
-            flexDirection='column'
-            justifyContent='space-between'
-            px={3}
-          >
-            <Box flex='1 0 auto'>{children}</Box>
-            <Flex my={3} flexDirection={['column', 'row']} justifyContent='center'>
-              <Text textAlign={['left', 'center']} fontSize={0} fontFamily='sans' color='white' mr={1}>
-                © 02019&ndash;∞, {data.site.siteMetadata.title}.
+        <Flex
+          flexDirection='column'
+          justifyContent='space-between'
+          style={{ minHeight: '100vh' }}
+        >
+          {children}
+          <Flex bg='blue' px={3} py={3} flexDirection={[' column', 'row']} justifyContent='center'>
+            <Text textAlign={['left', 'center']} fontSize={0} fontFamily='sans' color='white' mr={1}>
+              © 02019&ndash;∞, {data.site.siteMetadata.title}.
               </Text>
-              <Text textAlign={['left', 'center']} fontSize={0} fontFamily='sans' color='white'>
-                Boulder Creek, CA
+            <Text textAlign={['left', 'center']} fontSize={0} fontFamily='sans' color='white'>
+              Boulder Creek, CA
               </Text>
-            </Flex>
           </Flex>
         </Flex>
-      </ThemeProvider>
+      </ThemeProvider >
     )}
   />
 )
