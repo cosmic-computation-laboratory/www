@@ -1,9 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
+import { ThemeProvider } from 'emotion-theming'
+import theme from '../theme'
 import "./layout.css"
+import "../webfonts/CCL.css"
+import { Box, Flex, Text } from "@rebass/emotion";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -17,24 +19,26 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
+      <ThemeProvider theme={theme}>
+        <Flex bg='blue' margin='0' justifyContent='center' style={{
+          minHeight: '100vh'
+        }}>
+          <Flex
+            flexDirection='column'
+            justifyContent='space-between'
+          >
+            <Box flex='1 0 auto'>{children}</Box>
+            <Flex my={3} flexDirection={['column', 'row']} justifyContent='center'>
+              <Text textAlign={['left', 'center']} fontSize={0} fontFamily='sans' color='white' mr={1}>
+                © 02019&ndash;∞, {data.site.siteMetadata.title}.
+              </Text>
+              <Text textAlign={['left', 'center']} fontSize={0} fontFamily='sans' color='white'>
+                Boulder Creek, CA
+              </Text>
+            </Flex>
+          </Flex>
+        </Flex>
+      </ThemeProvider>
     )}
   />
 )
