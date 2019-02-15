@@ -6,39 +6,35 @@ import Header from '../components/Header'
 import Image from "../components/image"
 import SEO from "../components/seo"
 import { Flex, Box, Link as RLink, Text } from '@rebass/emotion'
-import rehypeReact from 'rehype-react'
-import { ParagraphText, Heading } from '../components/typography';
+import { ParagraphText, Heading1, Heading2, Heading3 } from '../components/typography';
+import MDXRenderer from "gatsby-mdx/mdx-renderer";
 
-const renderAst = new rehypeReact({
-  createElement: React.createElement,
-  components: {
-    h1: Heading,
-    h2: Heading,
-    h3: Heading,
-    p: ParagraphText,
-  },
-}).Compiler
+const components = {
+  h1: Heading1,
+  h2: Heading2,
+  h3: Heading3,
+  p: ParagraphText,
+  // blockquote: props => {
+  //   console.log(props);
+  //   return <BigQuote {...props} />
+  // }
+};
 
 
 class JournalEntry extends React.Component {
   render() {
     const { data } = this.props;
     const siteTitle = data.site.siteMetadata.title
-    const post = data.markdownRemark;
+    const post = data.mdx;
 
     return <Layout location={this.props.location}>
       <div>
         <Header siteTitle={siteTitle} />
         <Box px={3} py={3} style={{ maxWidth: 960, margin: '0 auto' }}>
           <SEO title={post.frontmatter.title} description={post.excerpt} />
-          <Heading>{post.frontmatter.title}</Heading>
+          <Heading1>{post.frontmatter.title}</Heading1>
           <Text fontWeight='bold' mt={4} mb={4} fontFamily='sans'>{post.frontmatter.date}</Text>
-          {renderAst(post.htmlAst)}
-          <Box my={4}>
-            <Text mb={3} fontSize={6} fontFamily='stamp'>It is important to expect nothing, to take every experience, including the negative ones, as merely steps on the path, and to proceed</Text>
-            <Text fontSize={2} fontFamily='sans'>—Ram Dass</Text>
-          </Box>
-          {renderAst(post.htmlAst)}
+          <MDXRenderer components={components}>{post.code.body}</MDXRenderer>
         </Box>
       </div>
     </Layout>
@@ -55,7 +51,9 @@ export const query = graphql`
 
     mdx(fields: { slug: { eq: $slug } }) {
       id
-      rawBody
+      code {
+        body
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, 0YYYY")

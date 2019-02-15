@@ -749,13 +749,6 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
 
-"@mapbox/hast-util-table-cell-style@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@mapbox/hast-util-table-cell-style/-/hast-util-table-cell-style-0.1.3.tgz#5b7166ae01297d72216932b245e4b2f0b642dca6"
-  integrity sha512-QsEsh5YaDvHoMQ2YHdvZy2iDnU3GgKVBTcHf6cILyoWDZtPSdlG444pL/ioPYO/GpXSfODBb9sefEetfC4v9oA==
-  dependencies:
-    unist-util-visit "^1.3.0"
-
 "@mdx-js/mdx@^0.17.0":
   version "0.17.0"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-0.17.0.tgz#0106c0be49ab8dbcacfff046e9a4c74833f2511d"
@@ -8729,15 +8722,6 @@ regjsparser@^0.6.0:
   resolved "https://registry.yarnpkg.com/regjsparser/-/regjsparser-0.6.0.tgz#f1e6ae8b7da2bae96c99399b868cd6c933a2ba9c"
   dependencies:
     jsesc "~0.5.0"
-
-rehype-react@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/rehype-react/-/rehype-react-3.1.0.tgz#bdd4b66ff24bd68e57c2f2e716607b3029c9e63e"
-  integrity sha512-7SiLiqNudSGkvhrePkdKqdUvngZqzG+PJhdR5EeIFELz2j2ek4aO5DHbxUXYvaZfqUiBDO2Aeq1OROUmxmu+Vg==
-  dependencies:
-    "@mapbox/hast-util-table-cell-style" "^0.1.3"
-    has "^1.0.1"
-    hast-to-hyperscript "^5.0.0"
 
 relay-compiler@2.0.0:
   version "2.0.0"
