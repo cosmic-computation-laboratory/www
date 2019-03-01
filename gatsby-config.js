@@ -3,7 +3,7 @@ module.exports = {
     title: `Cosmic Computation Laboratory`,
     description: `Exploring alternate futures for mind, body, spirit & planet`,
     author: `@cosmiccomlab`,
-    email: 'ccl@jon.gold'
+    email: 'gold@cosmiccomputation.org'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
