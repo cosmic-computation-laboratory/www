@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
               © 02019&ndash;∞, {data.site.siteMetadata.title}.
               </Text>
             <Text textAlign={['left', 'center']} fontSize={0} fontFamily='sans' color='white'>
-              Boulder Creek, CA
+              Nevada City, CA
               </Text>
           </Flex>
         </Flex>
