@@ -3,7 +3,7 @@ module.exports = {
     title: `Cosmic Computation Laboratory`,
     description: `Exploring alternate futures for mind, body, spirit & planet`,
     author: `@cosmiccomlab`,
-    email: "gold@cosmiccomputation.org"
+    email: `gold@cosmiccomputation.org`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,24 +11,25 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/content/journal`
-      }
+        path: `${__dirname}/content/journal`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/assets`,
-        name: `assets`
-      }
+        name: `assets`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
-    "gatsby-plugin-theme-ui",
+    `gatsby-plugin-theme-ui`,
+    `gatsby-plugin-mdx`,
     `gatsby-theme-style-guide`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -41,11 +42,11 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/icon-512x512.png` // This path is relative to the root of the site.
-      }
-    }
+        icon: `src/images/icon-512x512.png`, // This path is relative to the root of the site.
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
-  ]
+  ],
 };

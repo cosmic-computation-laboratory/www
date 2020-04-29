@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
         {children}
         <Flex
           sx={{
-            bg: "background",
+            // bg: "primary",
             px: 3,
             py: 3,
             flexDirection: ["column", "row"],
@@ -38,18 +38,15 @@ const Layout = ({ children }) => {
         >
           <Text
             sx={{
-              textAlign: ["left", "center"],
-              color: "white",
+              textAlign: ["center"],
               mr: 1,
             }}
           >
-            © 0{new Date().getFullYear()}&ndash;∞,{" "}
-            {data.site.siteMetadata.title}.
+            © 02019&ndash;∞, {data.site.siteMetadata.title}.
           </Text>
           <Text
             sx={{
-              textAlign: ["left", "center"],
-              color: "white",
+              textAlign: ["center"],
             }}
           >
             Portland, OR

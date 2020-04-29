@@ -9,12 +9,12 @@
 //   }
 // };
 
-const join = xs => xs.join(", ");
+const join = (xs) => xs.join(", ");
 
 const theme = {
   colors: {
-    // text:,
-    background: "#0139FF"
+    text: "#222",
+    primary: "#0139FF",
     // primary
     // secondary
     // accent
@@ -30,37 +30,74 @@ const theme = {
       "Roboto",
       "Helvetica Neue",
       "Helvetica",
-      "sans-serif"
-    ])
+      "sans-serif",
+    ]),
+  },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.25,
+  },
+  sizes: {
+    sidebar: 256,
+    container: 1024,
   },
   text: {
     hero: {
       lineHeight: 0.9,
       mb: 4,
-      textAlign: ["left", "center"],
+      textAlign: ["center"],
       fontSize: [6, 8],
       fontFamily: "serif",
-      color: "white"
+      color: "white",
     },
     subhero: {
-      textAlign: ["left, center"],
+      textAlign: ["center"],
       fontSize: [3, 4],
       mb: [4, 5],
       color: "white",
       fontFamily: "serif",
-      fontWeight: "bold"
-    }
+      fontWeight: "bold",
+    },
+    heading: {
+      fontFamily: "serif",
+    },
   },
   styles: {
     root: {
       fontFamily: "sans",
-      fontSize: 0
-    }
-
-    // h1: {
-    //   fontSize: [5, 6, 7]
-    // }
-  }
+      fontSize: 1,
+    },
+    h1: {
+      variant: "text.heading",
+      fontSize: 6,
+    },
+    h2: {
+      variant: "text.heading",
+      fontSize: 5,
+    },
+    h3: {
+      variant: "text.heading",
+      fontSize: 4,
+    },
+    h4: {
+      variant: "text.heading",
+      fontSize: 3,
+    },
+    h5: {
+      variant: "text.heading",
+      fontSize: 2,
+    },
+    h6: {
+      variant: "text.heading",
+      fontSize: 1,
+    },
+    p: {
+      fontSize: 4,
+      color: "text",
+      lineHeight: "body",
+      fontFamily: "sans",
+    },
+  },
 };
 
 export default theme;

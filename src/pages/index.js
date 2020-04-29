@@ -2,9 +2,10 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
-import Image from "../components/image";
 import SEO from "../components/seo";
-import { Flex, Heading, Box, Link, Text } from "@theme-ui/components";
+import { Hero } from "../components/hero";
+import IndexText from "../components/indexText";
+import { Container } from "theme-ui";
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -14,90 +15,13 @@ const IndexPage = ({ data }) => (
         `Cosmic Computation Laboratory`,
         `R&D`,
         `Emergent Technology`,
-        `Entheotechnology`
+        `Entheotechnology`,
       ]}
     />
-    <Flex
-      sx={{
-        bg: "background",
-        px: 3,
-        py: 3,
-        flexDirection: "column",
-        flex: "1 0 auto",
-        alignItems: ["left", "center"]
-      }}
-    >
-      <Box
-        sx={{
-          width: `150px`,
-          mb: [2, 4],
-          mt: [1, 4, 5]
-        }}
-      >
-        <Image />
-      </Box>
-      <Flex
-        sx={{
-          flexDirection: "column"
-        }}
-      >
-        <Heading variant="hero">
-          {data.site.siteMetadata.title.split(" ").map(t => (
-            <Text display="block">{t}</Text>
-          ))}
-        </Heading>
-        <Heading variant="subhero">
-          {data.site.siteMetadata.description}
-        </Heading>
-      </Flex>
-      <Text sx={{ fontFamily: "sans" }}>
-        <Link
-          sx={{
-            color: "white",
-            mr: 2,
-            fontSize: 1
-          }}
-          href={`mailto:${data.site.siteMetadata.email}`}
-        >
-          Email
-        </Link>
-        <Link
-          sx={{
-            color: "white",
-            mr: 2,
-            fontSize: 1
-          }}
-          href={`https://twitter.com/${data.site.siteMetadata.author}`}
-        >
-          Twitter
-        </Link>
-        <Link
-          sx={{
-            color: "white",
-            mr: 2,
-            fontSize: 1
-          }}
-          href={`https://tinyletter.com/cosmic`}
-        >
-          Newsletter
-        </Link>
-      </Text>
-    </Flex>
-    {/* <Flex sx={{ py: 5, flexDirection: "column", alignItems: "center" }}>
-      <Box sx={{ maxWidth: "40rem" }}>
-        <Text
-          sx={{
-            fontSize: 4,
-            lineHeight: 1.4
-          }}
-        >
-          <Text sx={{ fontFamily: "serif" }}>
-            Cosmic Computation Laboratory
-          </Text>
-          <Text>is the creative technology studio of Jon Gold.</Text>
-        </Text>
-      </Box>
-    </Flex> */}
+    <Hero metadata={data.site.siteMetadata} />
+    <Container>
+      <IndexText sx={{}} />
+    </Container>
   </Layout>
 );
 
