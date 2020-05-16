@@ -64,6 +64,16 @@ export const Hero = ({ metadata }) => (
           mr: 2,
           fontSize: 1,
         }}
+        href={`https://github.com/cosmic-computation-laboratory`}
+      >
+        GitHub
+      </Link>
+      <Link
+        sx={{
+          color: "white",
+          mr: 2,
+          fontSize: 1,
+        }}
         href={`https://tinyletter.com/cosmic`}
       >
         Newsletter

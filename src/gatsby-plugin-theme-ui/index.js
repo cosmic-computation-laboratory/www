@@ -1,29 +1,16 @@
-// import { tailwind } from "@theme-ui/presets";
-// console.log({
-//   tailwind
-// });
-// export default {
-//   ...tailwind,
-//   styles: {
-//     ...tailwind.styles
-//   }
-// };
-
 const join = (xs) => xs.join(", ");
 
 const theme = {
   colors: {
     text: "#222",
+    background: "#fff",
     primary: "#0139FF",
-    // primary
-    // secondary
-    // accent
-    // muted
   },
   fonts: {
     serif: join(["WindsorLT-Bold", "Georgia", "serif"]),
     stamp: join(["HandStampedJNL-Regular", "serif"]),
     sans: join([
+      "Inter",
       "-apple-system",
       "BlinkMacSystemFont",
       "Segoe UI",

@@ -2,9 +2,11 @@
 import { Styled, jsx } from "theme-ui";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
+import { Helmet } from "react-helmet";
 import "normalize.css";
-import "../webfonts/CCL.css";
 import { Flex, Text } from "@theme-ui/components";
+
+import "../webfonts/CCL.css";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -19,6 +21,12 @@ const Layout = ({ children }) => {
 
   return (
     <Styled.root>
+      <Helmet>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
+      </Helmet>
       <Flex
         sx={{
           flexDirection: "column",
