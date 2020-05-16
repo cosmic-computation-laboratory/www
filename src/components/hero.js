@@ -9,7 +9,7 @@ export const Hero = ({ metadata }) => (
     sx={{
       bg: "primary",
       px: 4,
-      // py: 3,
+      py: 3,
       flexDirection: "column",
       flex: "1 0 auto",
       alignItems: ["center"],
@@ -37,7 +37,7 @@ export const Hero = ({ metadata }) => (
       </Heading>
       <Heading variant="subhero">{metadata.description}</Heading>
     </Flex>
-    <Text sx={{ fontFamily: "sans" }}>
+    <Text sx={{ fontFamily: "sans", mb: 3 }}>
       <Link
         sx={{
           color: "white",
