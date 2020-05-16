@@ -32,7 +32,9 @@ export const Hero = ({ metadata }) => (
     >
       <Heading variant="hero">
         {metadata.title.split(" ").map((t) => (
-          <Text display="block">{t}</Text>
+          <Text display="block" key={t}>
+            {t}
+          </Text>
         ))}
       </Heading>
       <Heading variant="subhero">{metadata.description}</Heading>
