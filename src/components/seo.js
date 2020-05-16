@@ -9,7 +9,7 @@ function SEO({ description, lang, meta, keywords, title, image, article }) {
       query={detailsQuery}
       render={({ site: { siteMetadata } }) => {
         const metaDescription = description || siteMetadata.description;
-        const seoImage = `${siteMetadata.siteUrl}${
+        const seoImage = `${siteMetadata.siteUrl}/${
           image || siteMetadata.defaultImage
         }`;
         return (
