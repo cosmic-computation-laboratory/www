@@ -3,7 +3,7 @@ const gatsbyBeaker = process.env.GATSBY_BEAKER === "true";
 module.exports = {
   siteMetadata: {
     title: `Cosmic Computation Laboratory`,
-    description: `A worker-owned technology research studio`,
+    description: `Exploring alternate futures for mind, body, spirit & planet`,
     author: `@cosmiccomlab`,
     email: `gold@cosmiccomputation.org`,
     defaultImage: "icons/icon-512x512.png",

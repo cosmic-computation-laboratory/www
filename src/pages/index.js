@@ -13,7 +13,7 @@ import { Container } from "theme-ui";
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO
-      title="Cosmic Computation Laboratory"
+      title="Home"
       keywords={[
         `Cosmic Computation Laboratory`,
         `R&D`,
