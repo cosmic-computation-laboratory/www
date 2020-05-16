@@ -54,6 +54,9 @@ const theme = {
       fontFamily: "sans",
       fontSize: 1,
     },
+    a: {
+      color: "primary",
+    },
     h1: {
       variant: "text.heading",
       fontSize: 6,

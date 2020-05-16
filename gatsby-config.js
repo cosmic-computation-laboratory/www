@@ -1,9 +1,12 @@
+const gatsbyBeaker = process.env.GATSBY_BEAKER === "true";
+
 module.exports = {
   siteMetadata: {
     title: `Cosmic Computation Laboratory`,
     description: `Exploring alternate futures for mind, body, spirit & planet`,
     author: `@cosmiccomlab`,
     email: `gold@cosmiccomputation.org`,
+    beaker: gatsbyBeaker,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
