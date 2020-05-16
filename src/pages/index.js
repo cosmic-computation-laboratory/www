@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => (
         `Entheotechnology`,
       ]}
     />
-    <Hero metadata={data.site.siteMetadata} />
+    <Hero />
     <Container>
       <IndexText />
       <div

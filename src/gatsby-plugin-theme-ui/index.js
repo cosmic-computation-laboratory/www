@@ -26,6 +26,8 @@ const theme = {
   },
   sizes: {
     sidebar: 256,
+    measure: 768,
+
     container: 1024,
   },
   text: {
@@ -36,6 +38,9 @@ const theme = {
       fontSize: [6, 8],
       fontFamily: "serif",
       color: "white",
+    },
+    stamp: {
+      fontFamily: "stamp",
     },
     subhero: {
       textAlign: ["center"],
@@ -48,6 +53,18 @@ const theme = {
     heading: {
       fontFamily: "serif",
     },
+    linkedHeading: {
+      fontFamily: "stamp",
+      a: {
+        color: "text",
+      },
+    },
+  },
+  layouts: {
+    list: {
+      maxWidth: "container",
+      margin: "0 auto",
+    },
   },
   styles: {
     root: {
@@ -58,8 +75,8 @@ const theme = {
       color: "primary",
     },
     h1: {
-      variant: "text.heading",
-      fontSize: 6,
+      variant: "text.stamp",
+      fontSize: 5,
     },
     h2: {
       variant: "text.heading",
@@ -82,10 +99,13 @@ const theme = {
       fontSize: 1,
     },
     p: {
-      fontSize: 4,
+      fontSize: 3,
       color: "text",
       lineHeight: "body",
       fontFamily: "sans",
+    },
+    img: {
+      maxWidth: "100%",
     },
   },
 };

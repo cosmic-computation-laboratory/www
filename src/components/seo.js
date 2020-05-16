@@ -101,6 +101,10 @@ const detailsQuery = graphql`
         title
         description
         author
+        social {
+          name
+          url
+        }
         siteUrl
         defaultImage
       }

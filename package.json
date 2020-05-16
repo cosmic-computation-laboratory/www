@@ -3,7 +3,7 @@
   "private": true,
   "description": "Our website",
   "version": "0.1.0",
-  "author": "Jon Gold <hello@designedbygold.com>",
+  "author": "Jon Gold <gold@cosmiccomputation.org>",
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@mdx-js/mdx": "^1.6.0",
@@ -20,7 +20,9 @@
     "gatsby-plugin-react-helmet": "^3.1.14",
     "gatsby-plugin-sharp": "^2.2.37",
     "gatsby-plugin-theme-ui": "^0.2.43",
+    "gatsby-remark-images": "^3.3.3",
     "gatsby-source-filesystem": "^2.1.36",
+    "gatsby-theme-blog-core": "^1.5.8",
     "gatsby-theme-style-guide": "^0.2.49",
     "gatsby-transformer-sharp": "^2.3.3",
     "normalize.css": "^8.0.1",

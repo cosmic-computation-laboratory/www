@@ -5,6 +5,21 @@ module.exports = {
     title: `Cosmic Computation Laboratory`,
     description: `A worker-owned technology research studio exploring alternate futures for mind, body, spirit & planet`,
     author: `@cosmiccomlab`,
+    social: [
+      {
+        name: `Twitter`,
+        url: `https://twitter.com/cosmiccomlab`,
+      },
+      {
+        name: `GitHub`,
+        url: `https://github.com/cosmic-computation-laboratory`,
+      },
+      {
+        name: "Are.na",
+        url: `https://www.are.na/cosmic-computation-laboratory`,
+      },
+    ],
+
     email: `gold@cosmiccomputation.org`,
     defaultImage: "icons/icon-512x512.png",
     siteUrl: gatsbyBeaker
@@ -14,12 +29,29 @@ module.exports = {
     beaker: gatsbyBeaker,
   },
   plugins: [
+    // "@aengusm/gatsby-theme-brain",
+    {
+      resolve: `gatsby-theme-blog-core`,
+      options: {
+        mdxOtherwiseConfigured: true,
+        // basePath defaults to `/`
+        contentPath: `content/journal`,
+        basePath: `/journal`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
+        name: `journal`,
         path: `${__dirname}/content/journal`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `brain`,
+        path: `${__dirname}/content/brain`,
       },
     },
     {
@@ -44,7 +76,20 @@ module.exports = {
       },
     },
     `gatsby-plugin-theme-ui`,
-    `gatsby-plugin-mdx`,
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-theme-style-guide`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
