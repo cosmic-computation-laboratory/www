@@ -3,20 +3,22 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, image, article }) {
   return (
     <StaticQuery
       query={detailsQuery}
-      render={(data) => {
-        const metaDescription =
-          description || data.site.siteMetadata.description;
+      render={({ site: { siteMetadata } }) => {
+        const metaDescription = description || siteMetadata.description;
+        const seoImage = `${siteMetadata.siteUrl}${
+          image || siteMetadata.defaultImage
+        }`;
         return (
           <Helmet
             htmlAttributes={{
               lang,
             }}
             title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            titleTemplate={`%s | ${siteMetadata.title}`}
             meta={[
               {
                 name: `description`,
@@ -32,15 +34,20 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:type`,
-                content: `website`,
+                content: article ? `article` : `website`,
               },
+              {
+                name: `og:image`,
+                content: seoImage,
+              },
+
               {
                 name: `twitter:card`,
                 content: `summary`,
               },
               {
                 name: `twitter:creator`,
-                content: data.site.siteMetadata.author,
+                content: siteMetadata.author,
               },
               {
                 name: `twitter:title`,
@@ -49,6 +56,10 @@ function SEO({ description, lang, meta, keywords, title }) {
               {
                 name: `twitter:description`,
                 content: metaDescription,
+              },
+              {
+                name: `twitter:image`,
+                content: seoImage,
               },
             ]
               .concat(
@@ -90,6 +101,8 @@ const detailsQuery = graphql`
         title
         description
         author
+        siteUrl
+        defaultImage
       }
     }
   }

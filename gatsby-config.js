@@ -6,6 +6,11 @@ module.exports = {
     description: `Exploring alternate futures for mind, body, spirit & planet`,
     author: `@cosmiccomlab`,
     email: `gold@cosmiccomputation.org`,
+    defaultImage: "icons/icon-512x512.png",
+    siteUrl: gatsbyBeaker
+      ? "hyper://a1399bc69709e26e5f6b49c92e4045ea7c254ff0ed04ff0efbb49479a8cd9d61/"
+      : "https://cosmiccomputation.org",
+
     beaker: gatsbyBeaker,
   },
   plugins: [

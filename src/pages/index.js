@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => (
             <Fragment>
               Also available on the old-school web{" "}
               <a
-                href="https://cosmiccomputation.org"
+                href={data.site.siteMetadata.siteUrl}
                 alt="Cosmic Computation Laboratory: http://"
                 sx={{ variant: "styles.a" }}
               >
@@ -51,11 +51,11 @@ const IndexPage = ({ data }) => (
                 Beaker
               </a>{" "}
               <a
-                href="hyper://a1399bc69709e26e5f6b49c92e4045ea7c254ff0ed04ff0efbb49479a8cd9d61/"
+                href={data.site.siteMetadata.siteUrl}
                 alt="Cosmic Computation Laboratory: hyper://"
                 sx={{ variant: "styles.a" }}
               >
-                hyper://a1399bc69709e26e5f6b49c92e4045ea7c254ff0ed04ff0efbb49479a8cd9d61/
+                {data.site.siteMetadata.siteUrl}
               </a>
             </Fragment>
           )}
@@ -73,6 +73,7 @@ export const query = graphql`
         description
         author
         email
+        siteUrl
         beaker
       }
     }
