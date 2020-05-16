@@ -37,7 +37,9 @@ export const Hero = ({ metadata }) => (
           </Text>
         ))}
       </Heading>
-      <Heading variant="subhero">{metadata.description}</Heading>
+      <Heading variant="subhero">
+        Exploring alternate futures for mind, body, spirit & planet
+      </Heading>
     </Flex>
     <Text sx={{ fontFamily: "sans", mb: 3 }}>
       <Link
